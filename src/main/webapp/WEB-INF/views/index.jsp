@@ -198,9 +198,9 @@ pageEncoding="UTF-8"%>
                               </colgroup>
                               <tbody>
                                 <tr>
-                                  <td class="tac"><h2>${row.GYE_1}</h2></td>
-                                  <td class="tac"><h2>${row.NAMJA_1}</h2></td>
-                                  <td class="tac"><h2>${row.YEOJA_1}</h2></td>
+                                  <td class="tac"><h2>${row.GYE_1} 명</h2></td>
+                                  <td class="tac"><h2>${row.NAMJA_1} 명</h2></td>
+                                  <td class="tac"><h2>${row.YEOJA_1} 명</h2></td>
                                 </tr>
                               </tbody>
                             </table>
@@ -229,8 +229,8 @@ pageEncoding="UTF-8"%>
                             </colgroup>
                             <tbody>
                               <tr>
-                                <td class="tac"><h2>${row.SEDAEDANGINGU}</h2></td>
-                                <td class="tac"><h2></h2></td>
+                                <td class="tac"><h2>${row.SEDAEDANGINGU} 명</h2></td>
+                                <td class="tac"><h2>${row.n_65SEISANGGORYEONGJA} 명</h2></td>
                               </tr>
                             </tbody>
                           </table>
