@@ -30,7 +30,6 @@ public class SeoulController {
         ModelAndView mv = new ModelAndView();
         mv.addObject("rowList",seoulService.getSeoulPeople());
         mv.addObject("row",seoulService.findByJachigu(guname));
-        System.out.println(seoulService.findByJachigu(guname).getN_65SEISANGGORYEONGJA());
         mv.setViewName("index");
         return mv;
     }
