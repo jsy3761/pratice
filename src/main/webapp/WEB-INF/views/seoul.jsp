@@ -114,6 +114,14 @@ pageEncoding="UTF-8"%>
                               <span class="label">조회 기간</span>
                               <div class="value">${row.GIGAN}</div>
                             </td>
+                            <form action="view">
+                              <td>
+                                <span class="label">기간 입력 2010.1-4 ~ 2020.1-4</span>
+                              <input type="text" size="25" name="gigan" placeholder="예)2020년 1/4분기 -> 2020.1-4 "> 
+                              <input type="hidden" name="guname" value="${row.JACHIGU}">
+                              <input type="submit" value="조회">
+                              </td>
+                            </form>
                           </tr>
                           <tr>
                             <td class="s">

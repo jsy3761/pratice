@@ -56,9 +56,9 @@ public class SeoulService {
      * 기간 기준은 최신으로 검색
      * @param jachigu 자치구 이름
      */
-    public Row findByJachiguRecent(String jachigu) {
+    public Row findByJachiguRecent(String jachigu, String gigan) {
         Row row = rowList.stream().filter(r -> {
-            return r.getGIGAN().equals("2020.1-4") && r.getJACHIGU().equals(jachigu);
+            return r.getGIGAN().equals(gigan) && r.getJACHIGU().equals(jachigu);
         }).collect(Collectors.toList()).get(0);
 
         return row;

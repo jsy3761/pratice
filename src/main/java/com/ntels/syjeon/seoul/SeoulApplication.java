@@ -20,10 +20,5 @@ public class SeoulApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SeoulApplication.class, args);
-		ApiService apiService = new ApiService();
-		SeoulService seoulService = new SeoulService(apiService);
-
-		List<Row> rowList = seoulService.getRowsByGigan("2019.4-4");
-		rowList.forEach(System.out::println);
 	}
 }
