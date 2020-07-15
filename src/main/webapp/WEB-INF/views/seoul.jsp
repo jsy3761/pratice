@@ -83,7 +83,7 @@ pageEncoding="UTF-8"%>
               <div class="search_message hide">검색하신 내용이 없습니다.<br>Package와 Node를 선택해 주십시오.</div>
               <ul class="side_menu">
                 <c:forEach var="item" items="${rowList}">
-                  <li><a href="/view?guname=${item.JACHIGU}" id="${item.JACHIGU}" onclick="event()">${item.JACHIGU}</a></li>
+                  <li><a href="/view?guname=${item}" id="${item}" onclick="event()">${item}</a></li>
                 </c:forEach>   
               </ul>
             </div>
@@ -113,7 +113,6 @@ pageEncoding="UTF-8"%>
                             <td class="s">
                               <span class="label">조회 기간</span>
                               <div class="value">${row.GIGAN}</div>
-                              
                             </td>
                           </tr>
                           <tr>

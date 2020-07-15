@@ -16,17 +16,17 @@ public class SeoulController {
     @GetMapping(value = "/")
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView();
-        mv.addObject("rowList",seoulService.getSeoulPeople());
-        mv.setViewName("index");
+        mv.addObject("rowList",seoulService.getJachiguList());
+        mv.setViewName("seoul");
         return mv;
     }
 
     @GetMapping(value = "/view")
     public ModelAndView select(@RequestParam("guname") String guname){
         ModelAndView mv = new ModelAndView();
-        mv.addObject("rowList",seoulService.getSeoulPeople());
-        mv.addObject("row",seoulService.findByJachigu(guname));
-        mv.setViewName("index");
+        mv.addObject("rowList",seoulService.getJachiguList());
+        mv.addObject("row",seoulService.findByJachiguRecent(guname));
+        mv.setViewName("seoul");
         return mv;
     }
 
