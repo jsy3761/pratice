@@ -24,8 +24,9 @@ public class SeoulController {
     }
 
     @GetMapping(value = "/view")
-    public ModelAndView select(@RequestParam("guname") String guname,
+    public ModelAndView select(@RequestParam(value = "guname", defaultValue = "합계") String guname,
                                @RequestParam(value = "gigan", defaultValue = "2020.1-4") String gigan){
+
         ModelAndView mv = new ModelAndView();
         mv.addObject("rowList",seoulService.getJachiguList());
         mv.addObject("row",seoulService.findByJachiguRecent(guname,gigan));
