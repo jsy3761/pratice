@@ -170,8 +170,22 @@ public class Row {
     }
 
     @Override
-    public String toString()
-    {
-        return "ClassPojo [SEDAEDANGINGU = "+SEDAEDANGINGU+", SEDAE = "+SEDAE+", YEOJA_1 = "+YEOJA_1+", YEOJA_2 = "+YEOJA_2+", YEOJA_3 = "+YEOJA_3+", JACHIGU = "+JACHIGU+", NAMJA_1 = "+NAMJA_1+", GYE_2 = "+GYE_2+", NAMJA_2 = "+NAMJA_2+", GYE_3 = "+GYE_3+", NAMJA_3 = "+NAMJA_3+", N_65SEISANGGORYEONGJA = "+N_65SEISANGGORYEONGJA+", GYE_1 = "+GYE_1+", GIGAN = "+GIGAN+"]";
+    public String toString() {
+        return "Row{" +
+                "SEDAEDANGINGU='" + SEDAEDANGINGU + '\'' +
+                ", SEDAE='" + SEDAE + '\'' +
+                ", YEOJA_1='" + YEOJA_1 + '\'' +
+                ", YEOJA_2='" + YEOJA_2 + '\'' +
+                ", YEOJA_3='" + YEOJA_3 + '\'' +
+                ", JACHIGU='" + JACHIGU + '\'' +
+                ", NAMJA_1='" + NAMJA_1 + '\'' +
+                ", GYE_2='" + GYE_2 + '\'' +
+                ", NAMJA_2='" + NAMJA_2 + '\'' +
+                ", GYE_3='" + GYE_3 + '\'' +
+                ", NAMJA_3='" + NAMJA_3 + '\'' +
+                ", N_65SEISANGGORYEONGJA='" + N_65SEISANGGORYEONGJA + '\'' +
+                ", GYE_1='" + GYE_1 + '\'' +
+                ", GIGAN='" + GIGAN + '\'' +
+                '}';
     }
 }
