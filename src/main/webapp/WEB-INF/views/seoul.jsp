@@ -36,7 +36,7 @@ pageEncoding="UTF-8"%>
       <div class="cont_wrap">
         <ul class="tab_menu type_02">
           <li class="active"><!-- Selected tab -->
-            <a href="#none"><span class="txt">서울특별시</span></a>
+            <a href="view"><span class="txt">서울특별시</span></a>
           </li>
         </ul>
         <div class="search_area auto hidden">
@@ -111,15 +111,15 @@ pageEncoding="UTF-8"%>
                               </div>
                             </td>
                             <td class="s">
-                              <span class="label">조회 기간</span>
-                              <div class="value">${row.GIGAN}</div>
+                              <span class="label"><h2>조회 기간</h2></span>
+                              <div class="value"><h2>${row.GIGAN} 분기</h2></div>
                             </td>
-                            <form action="view">
+                            <form action="view" id="gigan">
                               <td>
-                                <span class="label">기간 입력 2010.1-4 ~ 2020.1-4</span>
-                              <input type="text" size="25" name="gigan" placeholder="예)2020년 1/4분기 -> 2020.1-4 "> 
-                              <input type="hidden" name="guname" value="${row.JACHIGU}">
-                              <input type="submit" value="조회">
+                                <span class="label"><h2>기간 입력 2010.1-4 ~ 2020.1-4</h2></span>
+                              <input type="text" size="30" name="gigan" placeholder="예)2020년 1/4분기 -> 2020.1-4 "> 
+                              <input type="hidden" name="guname" value="${row.JACHIGU}"><br />
+                              <button class="btn type_02 primary" type="submit" form="gigan">조회</button>
                               </td>
                             </form>
                           </tr>
@@ -132,8 +132,8 @@ pageEncoding="UTF-8"%>
                               </div>
                             </td>
                             <td class="s">
-                              <span class="label">세대 수</span>
-                              <div class="value">${row.SEDAE}</div>
+                              <span class="label"><h2>세대 수</h2></span>
+                              <div class="value"><h2>${row.SEDAE}</h2></div>
                               <span class="unit"></span>
                             </td>
                           </tr>
@@ -177,32 +177,22 @@ pageEncoding="UTF-8"%>
                     </tr>
                     <tr>
                       <th>
-                        <span>인구 상세</span>
+                        <span><h2>인구수</h2></span>
                       </th>
                       <td>
                           <div class="thead">
                             <table>
-                              <colgroup>
-                                <col style="width:*;">
-                                <col style="width:*;">
-                                <col style="width:*;">
-                              </colgroup>
                               <thead>
                                 <tr>
-                                  <th scope="col" class="tac">남여 총합</th>
-                                  <th scope="col" class="tac">남자 1</th>
-                                  <th scope="col" class="tac">여자 1</th>
+                                  <th scope="col" class="tac"><h2>남 여 총합</h2></th>
+                                  <th scope="col" class="tac"><h2>남자</h2></th>
+                                  <th scope="col" class="tac"><h2>여자</h2></th>
                                 </tr>
                               </thead>
                             </table>
                           </div>
                           <div class="tbody">
                             <table>
-                              <colgroup>
-                                <col style="width:*;">
-                                <col style="width:*;">
-                                <col style="width:*;">
-                              </colgroup>
                               <tbody>
                                 <tr>
                                   <td class="tac"><h2>${row.GYE_1} 명</h2></td>
@@ -216,24 +206,16 @@ pageEncoding="UTF-8"%>
             
                         <div class="thead">
                           <table>
-                            <colgroup>
-                              <col style="width:*;">
-                              <col style="width:*;">
-                            </colgroup>
                             <thead>
                               <tr>
-                                <th scope="col" class="tac">세대당 인구 수</th>
-                                <th scope="col" class="tac">65세 이상 고령자 수</th>
+                                <th scope="col" class="tac"><h2>세대당 인구</h2></th>
+                                <th scope="col" class="tac"><h2>65세 이상 고령자</h2></th>
                               </tr>
                             </thead>
                           </table>
                         </div>
                         <div class="tbody">
                           <table>
-                            <colgroup>
-                              <col style="width:*;">
-                              <col style="width:*;">
-                            </colgroup>
                             <tbody>
                               <tr>
                                 <td class="tac"><h2>${row.SEDAEDANGINGU} 명</h2></td>
