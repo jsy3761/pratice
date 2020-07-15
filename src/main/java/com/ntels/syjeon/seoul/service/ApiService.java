@@ -19,7 +19,14 @@ public class ApiService {
     private String serviceUrl = "http://openapi.seoul.go.kr:8088/41706259786a737933326546524443/json/octastatapi419/";
 
 
-    public String getApi(int startIndex, int endIndex){
+    /**
+     * api 호출 메서드
+     * @param startIndex
+     * @param endIndex
+     * 시작 ~ 끝 번호를 입력받아 호출
+     * @return
+     */
+    public String getApi(int startIndex, int endIndex) {
         cnt++;
         logger.debug("공공 API 호출 횟수 : {}", cnt);
         RestTemplate restTemplate = new RestTemplate();
@@ -33,12 +40,18 @@ public class ApiService {
                 .toString();
 
         ResponseEntity<String> responseEntity =
-                restTemplate.exchange(url, HttpMethod.GET,httpEntity, String.class);
+                restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class);
 
         return responseEntity.getBody();
     }
 
-    public String getApi(String gigan){
+    /**
+     * api 호출 메서드 (OverLoading)
+     * index사이즈를 1~26으로 고정하고 기간을 입력받아 기간별 서울시 인구현황조회
+     * @param gigan
+     * @return
+     */
+    public String getApi(String gigan) {
         cnt++;
         logger.debug("공공 API 호출 횟수 : {}", cnt);
         RestTemplate restTemplate = new RestTemplate();
@@ -54,7 +67,7 @@ public class ApiService {
                 .toString();
 
         ResponseEntity<String> responseEntity =
-                restTemplate.exchange(url, HttpMethod.GET,httpEntity, String.class);
+                restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class);
 
         return responseEntity.getBody();
     }
