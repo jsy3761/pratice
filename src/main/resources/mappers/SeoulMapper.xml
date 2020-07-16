@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ntels.syjeon.seoul.repository.SeoulMapper">
+
+    <insert id="insert" parameterType="com.ntels.syjeon.seoul.model.seoul.Row">
+        INSERT INTO seoulpeople
+        (gigan,jachigu,sedae,gye_1,namja_1,yeoja_1,gye_2,namja_2,yeoja_2,gye_3,namja_3,yeoja_3,sedaedangingu,n_65seisanggoryeongja)
+        VALUES
+        (#{GIGAN},#{JACHIGU},#{SEDAE},#{GYE_1},#{NAMJA_1},#{YEOJA_1},#{GYE_2},#{NAMJA_2},#{YEOJA_2},#{GYE_3},#{NAMJA_3},#{YEOJA_3},
+        #{SEDAEDANGINGU},#{N_65SEISANGGORYEONGJA})
+    </insert>
+
+
+
+
+</mapper>

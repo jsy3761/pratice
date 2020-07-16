@@ -17,8 +17,8 @@ public class ApiService {
     private HttpHeaders httpHeaders = new HttpHeaders();
     private HttpEntity<Object> httpEntity = new HttpEntity<>(httpHeaders);
 
-    public String callApi(String gigan, String jachigu){
-        logger.debug("callApi param : gigan : {} , jachigu : {}",gigan,jachigu);
+    public String callApi(String gigan, String jachigu) {
+        logger.debug("callApi param : gigan : {} , jachigu : {}", gigan, jachigu);
         String url = new StringBuilder(serviceUrl)
                 .append(gigan).append("/").append(jachigu)
                 .toString();

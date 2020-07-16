@@ -18,9 +18,9 @@ public class SeoulController {
     private SeoulService seoulService;
 
     @GetMapping(value = "/")
-    public ModelAndView index(){
+    public ModelAndView index() {
         ModelAndView mv = new ModelAndView();
-        mv.addObject("rowList",seoulService.getRowsList());
+        mv.addObject("rowList", seoulService.getRowsList());
         mv.setViewName("seoul");
 
         return mv;
@@ -28,12 +28,12 @@ public class SeoulController {
 
     @GetMapping(value = "/view")
     public ModelAndView select(@RequestParam(value = "jachigu", defaultValue = "합계") String jachigu,
-                               @RequestParam(value = "gigan", defaultValue = "2020-01") String gigan){
-        logger.debug(" request param : gigan : {} , jachigu : {}",gigan,jachigu);
+                               @RequestParam(value = "gigan", defaultValue = "2020-01") String gigan) {
+        logger.debug(" request param : gigan : {} , jachigu : {}", gigan, jachigu);
 
         ModelAndView mv = new ModelAndView();
-        mv.addObject("rowList",seoulService.getRowsList());
-        mv.addObject("row",seoulService.getRow(gigan,jachigu));
+        mv.addObject("rowList", seoulService.getRowsList());
+        mv.addObject("row", seoulService.getRow(gigan, jachigu));
         mv.setViewName("seoul");
 
         return mv;
