@@ -21,23 +21,6 @@ pageEncoding="UTF-8"%>
   <link rel="stylesheet" href="../../styles/atom/style.css">
   <link rel="stylesheet" href="../../styles/thingplug/thingplug.css">
   <script>
-
-var guname = searchParam('guname');
-  console.log(guname)
-
-$(document).on("click", ${row.JACHIGU}, function () {
-      var li = $(${row.JACHIGU});
-      alert(li);
-      
-    });
-
-function searchParam(key) {
-  return new URLSearchParams(location.search).get(key);
-};
-
-    
-
-
   </script>
 </head>
 
@@ -50,7 +33,7 @@ function searchParam(key) {
         <ul class="tab_menu type_02">
           <li class="active">
             <!-- Selected tab -->
-            <a href="view"><span class="txt">서울특별시</span></a>
+            <a href="/"><span class="txt">서울특별시</span></a>
           </li>
         </ul>
         <div class="search_area auto hidden">
@@ -96,9 +79,10 @@ function searchParam(key) {
               <div class="loading hide"><span></span></div>
               <div class="search_message hide">검색하신 내용이 없습니다.<br>Package와 Node를 선택해 주십시오.</div>
               <ul id="node" class="side_menu">
-                <c:forEach var="item" items="${rowList}">
+                <c:forEach var="row" items="${rowList}">
                   <li>
-                    <a id="${item}" href="view?guname=${item}" ><h3>${item}</h3></a>
+                    <a href="view?jachigu=${row.JACHIGU}"><h3>${row.JACHIGU}</h3>
+                    </a>
                   </li>
                 </c:forEach>
               </ul>
@@ -106,8 +90,6 @@ function searchParam(key) {
           </div>
           <div class="cell">
             <div class="box">
-              <div class="loading hide"><span></span></div>
-              <div class="search_message hide">선택된 내용이 없습니다.<br>왼쪽에서 Resource를 선택해 주십시오.</div>
               <div class="table type_03 detail">
                 <table>
                   <tbody>
@@ -121,41 +103,28 @@ function searchParam(key) {
                         <!-- Atom Resource -->
                         <table class="td_value">
                           <tr>
-                            <td class="s">
-                              <span class="label">Use Resource Group</span>
-                              <div class="switch type_01">
-                                <input type="checkbox" id="temp_id_11" checked disabled>
-                                <label for="temp_id_11"></label>
-                              </div>
-                            </td>
-                            <td class="s">
-                              <span class="label">
-                                <h2>조회 기간</h2>
-                              </span>
-                              <div class="value">
-                                <h2>${row.GIGAN} 분기</h2>
-                              </div>
-                            </td>
-                            <form action="view" id="gigan">
+                            <td class="s"></td>
                               <td>
                                 <span class="label">
-                                  <h2>기간 입력 2010.1-4 ~ 2020.1-4</h2>
+                                  <h2>조회 기간</h2>
                                 </span>
-                                <input id="gigan" type="text" size="30" name="gigan"
-                                  placeholder="예)2020년 1/4분기 -> 2020.1-4 ">
-                                <input type="hidden" name="guname" value="${row.JACHIGU}"><br />
+                                <div class="value">
+                                  <h2>${row.GIGAN} 분기</h2>
+                                </div>
+                              </td>      
+                            <form action="view" id="gigan">
+                              <td class="s">
+                                <span class="label">
+                                  <h2>기간 입력 2010.01 ~ 2020.07</h2>
+                                </span>
+                                <input id="gigan" type="month" size="30" name="gigan">
+                                <input type="hidden" name="jachigu" value="${row.JACHIGU}"><br />
                                 <button class="btn type_02 primary" type="submit" form="gigan">조회</button>
                               </td>
                             </form>
                           </tr>
                           <tr>
-                            <td class="s">
-                              <span class="label">Collect Statistics</span>
-                              <div class="switch type_01">
-                                <input type="checkbox" id="temp_id_12" disabled>
-                                <label for="temp_id_12"></label>
-                              </div>
-                            </td>
+                            <td class="s"></td>
                             <td class="s">
                               <span class="label">
                                 <h2>세대 수</h2>
@@ -167,43 +136,6 @@ function searchParam(key) {
                             </td>
                           </tr>
                         </table>
-                        <!-- Node Resource -->
-                        <table class="td_value hide">
-                          <tr>
-                            <td class="s">
-                              <span class="label">Use Flag</span>
-                              <div class="switch type_01">
-                                <input type="checkbox" id="temp_id_13" checked disabled>
-                                <label for="temp_id_13"></label>
-                              </div>
-                            </td>
-                            <td class="s">
-                              <span class="label">File Creation Cycle</span>
-                              <div class="value">100</div>
-                              <span class="unit">secs</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="s">
-                              <span class="label">Collect Statistics</span>
-                              <div class="switch type_01">
-                                <input type="checkbox" id="temp_id_14" disabled>
-                                <label for="temp_id_14"></label>
-                              </div>
-                            </td>
-                            <td class="s">
-                              <span class="label">Statistics Period</span>
-                              <div class="value">20</div>
-                              <span class="unit">mins</span>
-                            </td>
-                            <td>
-                              <span class="label">Metric Name</span>
-                              <div class="value">connection.status</div>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
                     <tr>
                       <th>
                         <span>
@@ -245,8 +177,8 @@ function searchParam(key) {
                             </tbody>
                           </table>
                         </div>
-                        <br /> <br />
-
+                        <br />
+                        <br />
                         <div class="thead">
                           <table>
                             <thead>
