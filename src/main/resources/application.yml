@@ -13,6 +13,9 @@ spring:
   devtools:
     livereload:
       enabled: true
+http:
+  api:
+    url: http://openapi.seoul.go.kr:8088/41706259786a737933326546524443/json/octastatapi419/1/26/
 
 server:
   port: 7000

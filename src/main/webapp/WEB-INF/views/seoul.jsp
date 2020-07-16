@@ -78,10 +78,11 @@ pageEncoding="UTF-8"%>
             <div class="box">
               <div class="loading hide"><span></span></div>
               <div class="search_message hide">검색하신 내용이 없습니다.<br>Package와 Node를 선택해 주십시오.</div>
-              <ul id="node" class="side_menu">
+              <ul class="side_menu">
                 <c:forEach var="row" items="${rowList}">
                   <li>
-                    <a href="view?jachigu=${row.JACHIGU}"><h3>${row.JACHIGU}</h3>
+                    <a href="view?jachigu=${row.JACHIGU}">
+                      <h3>${row.JACHIGU}</h3>
                     </a>
                   </li>
                 </c:forEach>
@@ -104,14 +105,14 @@ pageEncoding="UTF-8"%>
                         <table class="td_value">
                           <tr>
                             <td class="s"></td>
-                              <td>
-                                <span class="label">
-                                  <h2>조회 기간</h2>
-                                </span>
-                                <div class="value">
-                                  <h2>${row.GIGAN} 분기</h2>
-                                </div>
-                              </td>      
+                            <td>
+                              <span class="label">
+                                <h2>조회 기간</h2>
+                              </span>
+                              <div class="value">
+                                <h2>${row.GIGAN} 분기</h2>
+                              </div>
+                            </td>
                             <form action="view" id="gigan">
                               <td class="s">
                                 <span class="label">
