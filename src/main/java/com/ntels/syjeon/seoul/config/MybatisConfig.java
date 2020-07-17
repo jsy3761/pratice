@@ -11,8 +11,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
+/**
+ * MyBatis Config
+ * @Bean SessionFactory
+ * @Bean SessionTemplate
+ * @author syjeon@ntels.com
+ */
 @Configuration
-@ComponentScan(basePackages = "com.ntels.syjeon.seoul.repository")
+@ComponentScan(basePackages = "com.ntels.syjeon.seoul.dao")
 @EnableTransactionManagement
 public class MybatisConfig {
 

@@ -91,7 +91,7 @@ pageEncoding="UTF-8"%>
           </div>
           <div class="cell">
             <div class="box">
-              <div class="table type_03 detail">
+              <div class="table type_03 detail" style="height: 715px;">
                 <table>
                   <tbody>
                     <tr>
@@ -173,6 +173,78 @@ pageEncoding="UTF-8"%>
                                 </td>
                                 <td class="tac">
                                   <h2>${row.YEOJA_1} 명</h2>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="thead">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th scope="col" class="tac">
+                                  <h2>한국인 남 여 총합</h2>
+                                </th>
+                                <th scope="col" class="tac">
+                                  <h2>한국인 남자</h2>
+                                </th>
+                                <th scope="col" class="tac">
+                                  <h2>한국인 여자</h2>
+                                </th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="tbody">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td class="tac">
+                                  <h2>${row.GYE_2} 명</h2>
+                                </td>
+                                <td class="tac">
+                                  <h2>${row.NAMJA_2} 명</h2>
+                                </td>
+                                <td class="tac">
+                                  <h2>${row.YEOJA_2} 명</h2>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="thead">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th scope="col" class="tac">
+                                  <h2>등록외국인 남 여 총합</h2>
+                                </th>
+                                <th scope="col" class="tac">
+                                  <h2>등록외국인 남자</h2>
+                                </th>
+                                <th scope="col" class="tac">
+                                  <h2>등록외국인 여자</h2>
+                                </th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="tbody">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td class="tac">
+                                  <h2>${row.GYE_3} 명</h2>
+                                </td>
+                                <td class="tac">
+                                  <h2>${row.NAMJA_3} 명</h2>
+                                </td>
+                                <td class="tac">
+                                  <h2>${row.YEOJA_3} 명</h2>
                                 </td>
                               </tr>
                             </tbody>

@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.ntels.syjeon.seoul.repository.SeoulMapper">
+<mapper namespace="com.ntels.syjeon.seoul.dao.SeoulMapper">
 
     <insert id="insert" parameterType="com.ntels.syjeon.seoul.model.seoul.Row">
         INSERT INTO seoulpeople
